@@ -1,6 +1,6 @@
-name: "intro_r_citra"
+name: "intro_r"
 title: "Inicio"
-description: "R + CITRA-UMET"
+description: "R"
 output_dir: "_site"
 theme: theme_r_citra.css
 navbar:
