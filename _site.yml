@@ -1,8 +1,8 @@
 name: "intro_r"
 title: "Inicio"
-description: "R"
-output_dir: "_site"
-theme: theme_r_citra.css
+description: "Introducción a R"
+output_dir: "docs"
+theme: theme_r_intro.css
 navbar:
   # logo:
   #   image: https://www.utdt.edu/Images/ui2014/logo.png

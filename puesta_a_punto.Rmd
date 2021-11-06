@@ -6,7 +6,6 @@ site: distill::distill_website
 ---
 
 ```{r setup, include=FALSE}
-
 # Learn more about creating websites with Distill at:
 # https://rstudio.github.io/distill/website.html
 
