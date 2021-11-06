@@ -1,7 +1,7 @@
 name: "intro_r"
 title: "Inicio"
 description: "Intro a R"
-output_dir: "docs"
+output_dir: "."
 theme: theme_r_citra.css
 navbar:
   # logo:
@@ -16,33 +16,33 @@ navbar:
     - text: "Diapositivas"
       menu:
         - text: "Modulo 01.a - R base"
-          href: 0a_diapositivas/01a_r_intro_presentacion.html
+          href: a_diapositivas/01a_r_intro_presentacion.html
         - text: "Modulo 01.b - Proyecto de trabajo"
-          href: 0a_diapositivas/01b_r_proyecto_de_trabajo.html
+          href: a_diapositivas/01b_r_proyecto_de_trabajo.html
         - text: "Modulo 02 - Herramientas de procesamiento de datos"
-          href: 0a_diapositivas/02_tidyverse.html
+          href: a_diapositivas/02_tidyverse.html
         - text: "Modulo 03 - Herramientas para la vizualizacion de datos"
-          href: 0a_diapositivas/03_visualizacion.html
+          href: a_diapositivas/03_visualizacion.html
         - text: "Modulo 04 - scrapeando datos"
-          href: 0a_diapositivas/05_tendencias.html
+          href: a_diapositivas/05_tendencias.html
         - text: "Extra - Informes"
-          href: 0a_diapositivas/06_informes.html
+          href: a_diapositivas/06_informes.html
     - text: "Ejercitacion"
       menu:
         - text: "Modulo 01.a - R base - Practica"
-          href: 0b_ejercitacion/01_r_intro_practica.html
+          href: b_ejercitacion/01_r_intro_practica.html
         - text: "Modulo 02 - Herramientas de procesamiento de datos"
-          href: 0b_ejercitacion/02_tidyverse_practica.html
+          href: b_ejercitacion/02_tidyverse_practica.html
 #        - text: "Modulo 03 - Herramientas para la vizualizacion de datos"
 #          href: publish_article.html
         - text: "Modulo 04 - scrapeando datos"
-          href: 0b_ejercitacion/04_scraper.R
+          href: b_ejercitacion/04_scraper.R
         - text: "Extra - Informes"
-          href: 0a_diapositivas/06_informes.rmd
+          href: a_diapositivas/06_informes.rmd
     - text: "Bibliografia"
       href: biblio.html
     - icon: fab fa-github
-      href: https://github.com/pablotis
+      href: https://github.com/pablotis/intro_r
       
       
 output: distill::distill_article
