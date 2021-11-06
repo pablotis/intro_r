@@ -16,7 +16,7 @@ navbar:
     - text: "Diapositivas"
       menu:
         - text: "Modulo 01.a - R base"
-          href: pablotis.github.io/intro_r/0a_diapositivas/01a_r_intro_presentacion.html
+          href: docs/0a_diapositivas/01a_r_intro_presentacion.html
         - text: "Modulo 01.b - Proyecto de trabajo"
           href: docs/0a_diapositivas/01b_r_proyecto_de_trabajo.html
         - text: "Modulo 02 - Herramientas de procesamiento de datos"
