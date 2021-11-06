@@ -1,12 +1,48 @@
 name: "intro_r"
-title: "Introducción a R"
-description: |
-  Introducción a R
+title: "Inicio"
+description: "Intro a R"
 output_dir: "docs"
+theme: theme_r_citra.css
 navbar:
+  # logo:
+  #   image: https://www.utdt.edu/Images/ui2014/logo.png
+  #   href: https://www.utdt.edu
+  left:
+    - text: "Profesor"
+      href: bio.html
   right:
-    - text: "Home"
-      href: index.html
-    - text: "About"
-      href: about.html
+    - text: "Puesta a punto"
+      href: puesta_a_punto.html
+    - text: "Diapositivas"
+      menu:
+        - text: "Modulo 01.a - R base"
+          href: 0a_diapositivas/01a_r_intro_presentacion.html
+        - text: "Modulo 01.b - Proyecto de trabajo"
+          href: 0a_diapositivas/01b_r_proyecto_de_trabajo.html
+        - text: "Modulo 02 - Herramientas de procesamiento de datos"
+          href: 0a_diapositivas/02_tidyverse.html
+        - text: "Modulo 03 - Herramientas para la vizualizacion de datos"
+          href: 0a_diapositivas/03_visualizacion.html
+        - text: "Modulo 04 - scrapeando datos"
+          href: 0a_diapositivas/05_tendencias.html
+        - text: "Extra - Informes"
+          href: 0a_diapositivas/06_informes.html
+    - text: "Ejercitacion"
+      menu:
+        - text: "Modulo 01.a - R base - Practica"
+          href: 0b_ejercitacion/01_r_intro_practica.html
+        - text: "Modulo 02 - Herramientas de procesamiento de datos"
+          href: 0b_ejercitacion/02_tidyverse_practica.html
+#        - text: "Modulo 03 - Herramientas para la vizualizacion de datos"
+#          href: publish_article.html
+        - text: "Modulo 04 - scrapeando datos"
+          href: 0b_ejercitacion/04_scraper.R
+        - text: "Extra - Informes"
+          href: 0a_diapositivas/06_informes.rmd
+    - text: "Bibliografia"
+      href: biblio.html
+    - icon: fab fa-github
+      href: https://github.com/pablotis
+      
+      
 output: distill::distill_article
