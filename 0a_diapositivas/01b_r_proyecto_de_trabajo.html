@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Armando un proyecto de trabajo</title>
+    <meta charset="utf-8" />
+    <script src="libs/header-attrs-2.9/header-attrs.js"></script>
+    <link href="libs/remark-css-0.0.1/default.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis.css" rel="stylesheet" />
+    <link href="libs/remark-css-0.0.1/metropolis-fonts.css" rel="stylesheet" />
+    <link href="libs/xaringanExtra-extra-styles-0.2.6/xaringanExtra-extra-styles.css" rel="stylesheet" />
+    <link href="libs/countdown-0.3.5/countdown.css" rel="stylesheet" />
+    <script src="libs/countdown-0.3.5/countdown.js"></script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Armando un proyecto de trabajo
+## R + Ciencias Sociales
+
+---
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;style type="text/css"&gt;
+.remark-slide-content {
+    font-size: 25px;
+    padding: 1em 1em 1em 1em;
+}
+&lt;/style&gt;
+
+
+
+
+
+
+# Hoja de ruta
+
+
+&lt;br&gt;&lt;br&gt;
+
+## ✔️ Paquetes
+
+## ✔️ Lectura / escritura de archivos
+
+## ✔️ Proyectos
+
+
+
+
+---
+class: inverse, middle, center
+
+
+# Paquetes
+
+&lt;html&gt;  &lt;div style='float:left'&gt;&lt;/div&gt;  &lt;hr color='#EB811B' size=1px width=1125px&gt;&lt;/html&gt;
+
+
+---
+# Paquetes
+
+### Con R podemos aumentar las funciones para realizar operaciones a través de los **paquetes**.
+
+&lt;img src="../img/R5.PNG" width="800" height="500" /&gt;
+
+
+
+---
+# Paquetes
+
+
+.pull-left[
+
+
+### Para poder usar un paquete, primero debemos __instalarlo__:
+
+```r
+
+`install.packages("nombre_del_paquete")`
+
+```
+
+]
+
+--
+
+.pull-right[
+
+
+### Cada vez que queremos utilizar una función del paquete, debemos __convocarlo__:
+
+```r
+
+`library(nombre_del_paquete)`
+
+```
+    
+]
+
+
+---
+class: inverse, middle, center
+
+# Lectura / importación de datos
+
+***
+
+---
+# Lectura / importación de datos
+
+## R base tiene una función para cada extensión de archivo:
+
+&lt;br&gt;&lt;br&gt;
+
+- `read.table()` --&gt; _.txt_
+
+- `read.csv()` --&gt; _.csv_
+
+- `readRDS()` --&gt; _.rds_
+
+
+
+---
+# Lectura / importación de datos
+
+## Pero... ¿no están todas, no?
+
+--
+
+### Para ello, instalaremos algunos paquetes que nos permiten incorporar más funciones para leer más tipos de datos. 
+
+Por ejemplo, el paquete `haven` incorpora:
+
+
+- `read_sas()` --&gt; _.sas (SAS)_
+
+- `read_spss()` --&gt; _.sav (SPSS)_
+
+- `read_stata()` --&gt; _.dta (STATA)_
+
+
+--
+
+y el paquete `readxl`:
+
+- `read_xlsx()` --&gt; _.xlsx (Excel)_
+
+---
+# Lectura / importación de datos
+
+
+### Supongamos que descargo la base de datos de registros de certificados [CUIDAR-VERANO](http://datos.yvera.gob.ar/dataset/certificado-unico-habilitante-para-circulacion-cuhc---verano) en formato separado por comas (_.csv_) y la quiero importar con R.
+
+--
+
+### la función que me permite importar una base de datos de tipo _.csv_ se llama `read.csv()`:
+
+```r
+base_cuidar &lt;- read.csv(
+  file = "C:/Users/pablo/Documents/Pablo/Cursos R/r_web/r_intro_citra/entradas/certificados-personas-por-fecha-ingreso-provincia-localidad.csv",
+  header = TRUE, 
+  sep = ",", 
+  dec = ".")
+
+```
+
+---
+# Lectura / importación de datos
+
+
+- A tener en cuenta respecto a la ruta donde se ubica el archivo:
+
+
+```r
+base_cuidar &lt;- read.csv(
+  'file = "C:/Users/pablo/Documents/Pablo/Cursos R/R+BigData/entradas/certificados-personas-por-fecha-ingreso-provincia-localidad.csv",'
+  header = TRUE, 
+  sep = ",", 
+  dec = ".")
+```
+
+--
+
+- Si se la compartimos a otra persona, __se rompe__
+    
+- Si cambiamos de computadora, __se rompe__
+    
+- Si lo cambiamos de lugar, __se rompe__
+   
+---
+class: inverse, center, middle
+
+&lt;img src="../img/tomy hanky.gif" width="800" height="500" /&gt;
+
+---
+class: inverse, center, middle
+
+&lt;img src="../img/Rproject.png" width="213" height="50%" /&gt;
+
+---
+# Proyectos y rutas de trabajo
+
+
+
+.pull-left[
+
+#### Paso 1:
+
+&lt;img src="../img/nuevo_proyecto.png" width="1092" /&gt;
+
+]
+
+.pull-right[
+
+#### Paso 2:
+
+&lt;img src="../img/nuevo_proyecto_1.png" width="703" /&gt;
+
+]
+
+
+---
+# Proyectos y rutas de trabajo
+
+
+.pull-left[
+
+#### Paso 3:
+
+&lt;img src="../img/nuevo_proyecto_2.png" width="701" /&gt;
+
+]
+
+.pull-right[
+
+#### Resultado:
+
+&lt;img src="../img/proyecto_nuevo.png" width="1527" style="display: block; margin: auto;" /&gt;
+
+]
+
+---
+# Proyectos y rutas de trabajo
+
+
+### Armando un proyecto con Rstudio, la función se escribiría de esta forma:
+
+```r
+base_cuidar &lt;- read.csv(
+  'file = "entradas/certificados-personas-por-fecha-ingreso-provincia-localidad.csv",'
+  header = TRUE, 
+  sep = ",", 
+  dec = ".")
+```
+
+--
+
+### Ventajas: 
+
+    - Le indicamos a R dónde "vive" nuestra carpeta de trabajo
+
+    - La ruta ya no contiene ninguna referencia personal que impida ser abierto en otra computadora
+
+
+---
+class: inverse, middle, center
+
+&lt;img src="../img/la_luz.gif" width="800" height="500" /&gt;
+
+
+
+---
+# Proyectos y rutas de trabajo
+
+### Supongamos que queremos comenzar un nuevo proyecto para analizar el conjunto de certificados solicitados para vacacionar durante la temporada verano del año 2021
+
+--
+
+#### El flujo de trabajo sería el siguiente:
+
+
+1) Armo la carpeta del proyecto, por ejemplo con la estructura siguiente:
+
+- 📂 cuidar
+
+    - 📂 entradas
+    
+    - 📂 salidas
+    
+    - 📂 scripts
+    
+    - 📂 docs_metodologicos
+        
+---
+# Lectura / escritura de datos
+
+2) Ubico la base de datos en la carpeta correspondiente (__entradas__):
+
+- 📂 cuidar
+
+    - 📂 entradas
+    
+         - 📄 certificados-personas-por-fecha-ingreso-provincia-localidad.csv
+    
+    - 📂 salidas
+    
+    - 📂 scripts
+    
+    - 📂 docs_metodologicos
+
+---
+# Lectura / escritura de datos
+
+
+3) Abro Rstudio y creo un proyecto, ubicado en la carpeta principal (__cuidar__)
+
+
+- 📂 cuidar
+   
+     -  &lt;img src = "../img/Rproject.png" style="height: 35px; width:35px;"/&gt;  _proyecto_cuidar.Rproj_
+  
+     - 📂 entradas
+     
+         - 📄 _certificados-personas-por-fecha-ingreso-provincia-localidad.csv_
+     
+     - 📂 salidas
+     
+     - 📂 scripts
+     
+     - 📂 docs_metodologicos
+
+
+---
+# Lectura / escritura de datos
+
+
+4) Creo un script llamado _levantar_datos.R_ para trabajar en R y lo guardo en la carpeta __script__
+
+
+- 📂 cuidar
+    
+    -  &lt;img src = "../img/Rproject.png" style="height: 35px; width:35px;"/&gt;  _proyecto_cuidar.Rproj_
+  
+    - 📂 entradas
+  
+        - 📄 _certificados-personas-por-fecha-ingreso-provincia-localidad.csv_
+  
+    - 📂 salidas
+    
+    - 📂 scripts
+    
+        - 📄 _1_levantar_datos.R_
+    
+    - 📂 docs_metodologicos
+
+
+---
+# Lectura / escritura de datos
+
+5) En el script, cargo los paquetes cuyas funciones voy a utilizar. En este caso, el paquete `readxl` para poder importar bases de datos de una extensión _.xlsx (Excel)_:
+
+
+```r
+library(readxl)
+```
+
+--
+
+6) Creo un objeto en el cual voy a importar la base de datos y utilizo la función `read_xlsx()` para hacerlo.
+
+__Recordar:__ _Estamos en un proyecto, por lo que la ruta es a partir de la carpeta en la que se encuentra el mismo_
+
+```r
+base_cuidar &lt;- read_xlsx(file = "entradas/cuidar_verano_excel.xlsx")
+```
+
+
+
+---
+# Funciones para una primera mirada a la base de datos:
+
+| __Función__       | __Acción__ |
+| :---              | :---   |
+| `dim()`           | *Nos dice cuántas filas y columnas tiene la base*|
+| `colnames()`      | *Devuelve todos los nombres de las variables de la base*|
+| `str()`           | *Devuelve una vista preliminar de la estructura de las variables*|
+| `summary()`       | *Devuelve un resúmen de medidas centrales para variables numéricas y características para variables de texto *|
+| `class()`         | *Chequeo el tipo de objeto*|
+| `length()`        | *Devuelve la cantidad de elementos de un objeto*|
+| `table()`         | *Frecuencia simple o bivariada de una variable*|
+| `is.na()`         | *Verifica la presencia de valores NA (_missinh_) en la base/variable*|
+| `mean()`          | *Calcula el valor promedio de una variable numércia*|
+
+
+---
+# Chusmeando la base
+
+&lt;iframe src="https://pablot.shinyapps.io/ejercicio_xaringan/?showcase=0" width="100%" height="400px"&gt;&lt;/iframe&gt;
+
+---
+class: inverse, middle, center
+
+
+# PRÁCTICA
+
+&lt;html&gt;  &lt;div style='float:left'&gt;&lt;/div&gt;  &lt;hr color='#EB811B' size=1px width=1125px&gt;&lt;/html&gt;
+
+
+
+---
+class: inverse, middle
+
+# Práctica
+
+1. Crear una carpeta donde alojar el proyecto de trabajo
+
+1. Crear la estructura de carpetas propuesta
+
+1. En la carpeta __entradas__ incorporar una base de datos, preferentemente que usemos cotidianamente (no importa el formato)
+
+1. Crear un script de trabajo y alojarlo en la carpeta __scripts__
+
+1. Importar la base de datos y aplicar alguna de las funciones descritas previamente
+
+<div class="countdown blink-colon noupdate-15" id="timer_60db0a7e" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"ratio": "16:9",
+"highlightStyle": "github",
+"highlightLines": true,
+"highlightSpans": true,
+"countIncrementalSlides": false
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
