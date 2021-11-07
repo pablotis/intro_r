@@ -2,7 +2,6 @@ name: "intro_r"
 title: "Inicio"
 description: "Intro a R"
 output_dir: "docs"
-exclude: "bio.Rmd"
 theme: theme_intro_r.css
 navbar:
   #source_url: https://github.com/rstudio/distill
@@ -17,29 +16,27 @@ navbar:
     - text: "Diapositivas"
       menu:
         - text: "Modulo 01.a - R base"
-          href: a_diapositivas/01a_r_intro_presentacion.html
+#          href: a_diapositivas/01a_r_intro_presentacion.html
         - text: "Modulo 01.b - Proyecto de trabajo"
-          href: a_diapositivas/01b_r_proyecto_de_trabajo.html
+#          href: a_diapositivas/01b_r_proyecto_de_trabajo.html
         - text: "Modulo 02 - Herramientas de procesamiento de datos"
-          href: a_diapositivas/02_tidyverse.html
+#          href: a_diapositivas/02_tidyverse.html
         - text: "Modulo 03 - Herramientas para la vizualizacion de datos"
-          href: a_diapositivas/03_visualizacion.html
-        - text: "Modulo 04 - scrapeando datos"
-          href: a_diapositivas/05_tendencias.html
+#          href: a_diapositivas/03_visualizacion.html
         - text: "Extra - Informes"
-          href: a_diapositivas/06_informes.html
+#          href: a_diapositivas/06_informes.html
     - text: "Ejercitacion"
       menu:
         - text: "Modulo 01.a - R base - Practica"
-          href: b_ejercitacion/01_r_intro_practica.html
+#          href: b_ejercitacion/01_r_intro_practica.html
         - text: "Modulo 02 - Herramientas de procesamiento de datos"
-          href: b_ejercitacion/02_tidyverse_practica.html
-#        - text: "Modulo 03 - Herramientas para la vizualizacion de datos"
+#          href: b_ejercitacion/02_tidyverse_practica.html
+        - text: "Modulo 03 - Herramientas para la vizualizacion de datos"
 #          href: publish_article.html
-        - text: "Modulo 04 - scrapeando datos"
-          href: b_ejercitacion/04_scraper.R
+#        - text: "Modulo 04 - scrapeando datos"
+#          href: b_ejercitacion/04_scraper.R
         - text: "Extra - Informes"
-          href: a_diapositivas/06_informes.rmd
+#          href: a_diapositivas/06_informes.rmd
     - text: "Bibliografia"
       href: biblio.html
     - icon: fab fa-github
