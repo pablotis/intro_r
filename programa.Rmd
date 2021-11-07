@@ -1,0 +1,50 @@
+---
+title: "Programa"
+authot: 
+  - name: Pablo Tiscornia
+site: distill::distill_website
+---
+
+
+### Contenido:
+
+
+## Módulo I: Presentación del lenguaje R.
+  
+  + R base.
+  + Valores
+  + Vectores (variables)
+  + Funciones
+  + Objetos
+  + Data frames (bases de datos)
+  + Paquetes
+  + Importación de datos (formatos _.txt_, _.csv_, _.xlsx_, _.sav_, _.dat_)
+
+
+## Módulo II: Procesamiento de datos con el paquete `Tidyverse`:
+
+  + Limpieza de Base de datos: Renombrar y recodificar variables.
+  + Seleccionar variables, ordenar y agrupar la base de datos
+  + Creación de nuevas variables
+  + Aplicar filtros sobre la base de datos (definir poblaciones)
+  + Tratamiento de valores faltantes (missing values/ NA´s)
+  + Construir medidas de resumen de la información
+  + Tratamiento de variables numéricas
+  + Tratamiento de variables de texto
+
+
+## Módulo III: Visualización de la información
+  
+  + Gráficos elaborados en R (función “ggplot”): 
+  + Gráficos de línea, barras, Boxplots y distribuciones de densidad
+  + Parámetros de los gráficos: Leyendas, ejes, títulos, notas, colores, escala
+  + Gráficos en masa (generación de múltiples gráficos en pocas líneas de código)
+
+
+## Módulo IV: Introducción al web scraping
+  
+  + Aspectos básicos de html
+  + Recopilación y procesamiento de datos de la web
+
+<br>
+  

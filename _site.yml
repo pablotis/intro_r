@@ -1,18 +1,19 @@
 name: "intro_r"
 title: "Inicio"
 description: "Intro a R"
-output_dir: "."
-theme: theme_r_citra.css
+output_dir: "docs"
+exclude: "bio.Rmd"
+theme: theme_intro_r.css
 navbar:
-  # logo:
-  #   image: https://www.utdt.edu/Images/ui2014/logo.png
-  #   href: https://www.utdt.edu
+  #source_url: https://github.com/rstudio/distill
   left:
     - text: "Profesor"
-      href: bio.html
-  right:
+      href: about.html
+    - text: "Programa"
+      href: programa.html
     - text: "Puesta a punto"
       href: puesta_a_punto.html
+  right:
     - text: "Diapositivas"
       menu:
         - text: "Modulo 01.a - R base"

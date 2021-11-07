@@ -2128,7 +2128,9 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   @import url('https://fonts.googleapis.com/css2?family=DM+Mono');
   @import url('https://fonts.googleapis.com/css2?family=Anton');
   @import url('https://fonts.googleapis.com/css2?family=Londrina+Shadow&family=Overlock&family=Press+Start+2P&display=swap');
-  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap'
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Cardo');
+  @import url('https://fonts.googleapis.com/css2?family=Alata')
 
 
   html {
@@ -2145,10 +2147,10 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     --aside-color:     rgba(0, 0, 0, 0.6);
     --fig-cap-color:   rgba(0, 0, 0, 0.6);
     /*-- Specify custom fonts ~~~ must be imported above   --*/
-    --heading-font:    'Noto Serif';
-    --mono-font:       'Overlock', cursive;
-    --body-font:       'Overlock', cursive;
-    --navbar-font:     'Overlock', cursive;  /* websites + blogs only */
+    --heading-font:    'Alata', sans-serif;        /* edited */
+    --mono-font:       monospace;
+    --body-font:       'Cardo', serif;             /* edited */
+    --navbar-font:     'Alata', sans-serif;        /* edited */
   }
 
   /*-- ARTICLE METADATA --*/
@@ -2177,18 +2179,18 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   /* These properties only apply to Distill sites and blogs  */
 
   .distill-site-header {
-    --title-size:       25px;
-    --text-color:       #f7f7f7;
-    --text-size:        20px;
+    --title-size:       20px;
+    --text-color:       #faf1cf;
+    --text-size:        15px;
     --hover-color:      white;
-    --bkgd-color:       #7bccc4;
+    --bkgd-color:       #5daa68;
   }
 
   .distill-site-footer {
     --text-color:       rgba(255, 255, 255, 0.8);
     --text-size:        15px;
     --hover-color:      white;
-    --bkgd-color:       #abd9e9;
+    --bkgd-color:       #5daa68;
   }
 
   /*-- Additional custom styles --*/
@@ -2378,10 +2380,11 @@ code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
 <nav class="distill-site-nav distill-site-header">
 <div class="nav-left">
 <a href="index.html" class="title">Inicio</a>
-<a href="bio.html">Profesor</a>
+<a href="about.html">Profesor</a>
+<a href="programa.html">Programa</a>
+<a href="puesta_a_punto.html">Puesta a punto</a>
 </div>
 <div class="nav-right">
-<a href="puesta_a_punto.html">Puesta a punto</a>
 <div class="nav-dropdown">
 <button class="nav-dropbtn">
 Diapositivas
@@ -2434,50 +2437,13 @@ Ejercitacion
 <h2 id="objetivos-del-curso">Objetivos del curso</h2>
 <p>El presente taller tiene como objetivo principal introducir a los y las participantes en el aprendizaje del lenguaje de programación “R”, centrandose en los aspectos de importación de datos, limpieza, tratamiento, visualización y análisis.</p>
 <hr />
-<h3 id="contenido">Contenido:</h3>
-<h2 id="módulo-i-presentación-del-lenguaje-r.">Módulo I: Presentación del lenguaje R.</h2>
-<ul>
-<li>R base.</li>
-<li>Valores</li>
-<li>Vectores (variables)</li>
-<li>Funciones</li>
-<li>Objetos</li>
-<li>Data frames (bases de datos)</li>
-<li>Paquetes</li>
-<li>Importación de datos (formatos <em>.txt</em>, <em>.csv</em>, <em>.xlsx</em>, <em>.sav</em>, <em>.dat</em>)</li>
-</ul>
-<h2 id="módulo-ii-procesamiento-de-datos-con-el-paquete-tidyverse">Módulo II: Procesamiento de datos con el paquete <code>Tidyverse</code>:</h2>
-<ul>
-<li>Limpieza de Base de datos: Renombrar y recodificar variables.</li>
-<li>Seleccionar variables, ordenar y agrupar la base de datos</li>
-<li>Creación de nuevas variables</li>
-<li>Aplicar filtros sobre la base de datos (definir poblaciones)</li>
-<li>Tratamiento de valores faltantes (missing values/ NA´s)</li>
-<li>Construir medidas de resumen de la información</li>
-<li>Tratamiento de variables numéricas</li>
-<li>Tratamiento de variables de texto</li>
-</ul>
-<h2 id="módulo-iii-visualización-de-la-información">Módulo III: Visualización de la información</h2>
-<ul>
-<li>Gráficos elaborados en R (función “ggplot”):</li>
-<li>Gráficos de línea, barras, Boxplots y distribuciones de densidad</li>
-<li>Parámetros de los gráficos: Leyendas, ejes, títulos, notas, colores, escala</li>
-<li>Gráficos en masa (generación de múltiples gráficos en pocas líneas de código)</li>
-</ul>
-<h2 id="módulo-iv-introducción-al-web-scraping">Módulo IV: Introducción al web scraping</h2>
-<ul>
-<li>Aspectos básicos de html</li>
-<li>Recopilación y procesamiento de datos de la web</li>
-</ul>
-<p><br></p>
 <h3 id="cronograma">Cronograma:</h3>
-<p><strong>Duración del curso:</strong> 12hs.</p>
-<p><strong>Cantidad de clases:</strong> 6.</p>
-<p><strong>Cantidad de horas por clase:</strong> 2hs.</p>
-<p><strong>Día y horario de cursada:</strong> Martes de 9 a 11hs. am.</p>
-<p><strong>Fecha de inicio</strong>: 15 de Junio de 2021.</p>
-<p><strong>Fecha de finalización</strong>: 20 de julio de 2021.</p>
-<p><br><br></p>
+<p><strong>Duración del curso:</strong> a definir.</p>
+<p><strong>Cantidad de clases:</strong> a definir.</p>
+<p><strong>Cantidad de horas por clase:</strong> a definir.</p>
+<p><strong>Día y horario de cursada:</strong> a definir.</p>
+<p><strong>Fecha de inicio</strong>: a definir.</p>
+<p><strong>Fecha de finalización</strong>: a definir.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode r distill-force-highlighting-css"><code class="sourceCode r"></code></pre></div>
 <!--radix_placeholder_article_footer-->
 <!--/radix_placeholder_article_footer-->
