@@ -11,3 +11,10 @@ Lo de _Ciencias Sociales_ es una excusa! Los ejemplos serán a partir de bases c
 ## ¿Cómo?
 
 La idea es escribir código, mucho pero mucho código. Si bien habrá secciones expositivas, el curso se plantea generar un espacio de constante práctica y consulta.
+
+## Plataforma de trabajo
+
+- Nos vemós acá: pablotis.github.io/intro_r/
+
+- Trabajaremos sobre estos contenidos: https://pablotis.github.io/intro_r/programa.html 
+
