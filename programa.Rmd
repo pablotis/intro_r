@@ -6,9 +6,6 @@ site: distill::distill_website
 ---
 
 
-## Contenido:
-
-
 ### Módulo I: Presentación del lenguaje R.
   
   + R base.
@@ -19,8 +16,8 @@ site: distill::distill_website
 
 ### Módulo II: Procesamiento de datos con el paquete `Tidyverse`:
 
-  + **Importación** (de Excel, SPSS, Stata, archivos de texto, etc.)
-  + **Limpieza:** Seleccionar variables, filtrar casos, recodificar, renombrar, ordenar y agrupar información.
+  + Importación (de Excel, SPSS, Stata, archivos de texto, etc.)
+  + Limpieza: Seleccionar variables, filtrar casos, recodificar, renombrar, ordenar y agrupar información.
   + Tratamiento de valores faltantes (missing values/ NA´s)
   + Construir medidas de resumen de la información
 
