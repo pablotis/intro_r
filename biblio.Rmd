@@ -42,10 +42,3 @@ Versión en castellano: [**R para Ciencia de Datos**](https://es.r4ds.hadley.nz/
 
 
 ---
-
-
-### Referencias para la construcción de los materiales y las estrategias pedagógicas del curso:
-
-- Curso de _[Introducción a R para Ciencias Sociales. Aplicación practica en la EPH](https://github.com/Guidowe/Curso-R-Flacso)_, por Guido Weksler y Pablo Tiscornia
-
-- Curso 
