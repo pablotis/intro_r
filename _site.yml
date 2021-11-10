@@ -35,7 +35,7 @@ navbar:
 #          href: publish_article.html
 #        - text: "Modulo 04 - scrapeando datos"
 #          href: b_ejercitacion/04_scraper.R
-        - text: "Extra - Informes"
+        - text: "Modulo 04 - Informes"
 #          href: a_diapositivas/06_informes.rmd
     - text: "Bibliografia"
       href: biblio.html
