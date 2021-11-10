@@ -34,3 +34,4 @@ __Día y horario de cursada:__ a definir.
 __Fecha de inicio__: a definir.
 
 __Fecha de finalización__: a definir.
+

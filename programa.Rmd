@@ -33,5 +33,3 @@ site: distill::distill_website
   
   + Aspectos básicos de html
   + Recopilación y procesamiento de datos de la web
-
-  
