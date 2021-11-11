@@ -17,21 +17,21 @@ Lo de _Ciencias Sociales_ es una excusa! Los ejemplos serán a partir de bases c
 
 ## ¿Cómo?
 
-Se presentaran los contenidos de forma expositiva aunque la idea es escribir código, mucho pero mucho código, generando un espacio de constante idea y vuelta entre práctica y consultas.
+Las clases del taller serán teórico-prácticas. Por cada presentación temática se plantearán ejercicios sobre lo visto, abordando al mismo tiempo las dudas que puedan surgir. Se priorizará la utilización del programa durante la clase. 
 
 ---
 
 ## Cronograma: 
 
-__Duración del curso:__ a definir.
+__Duración del curso:__ 12hs.
 
-__Cantidad de clases:__ a definir.
+__Cantidad de encuentros:__ 4.
 
-__Cantidad de horas por clase:__ a definir.
+__Cantidad de horas por encuentro:__ 3hs.
 
-__Día y horario de cursada:__ a definir.
+__Día y horario de cursada:__ Jueves, de 18 a 21hs.
   
-__Fecha de inicio__: a definir.
+__Fecha de inicio__: 18 de noviembre.
 
-__Fecha de finalización__: a definir.
+__Fecha de finalización__: 9 de noviembre.
 
