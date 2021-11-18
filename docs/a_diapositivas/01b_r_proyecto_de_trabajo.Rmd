@@ -3,7 +3,7 @@ title: "Armando un proyecto de trabajo"
 subtitle: "R + Ciencias Sociales"
 output:
   xaringan::moon_reader:
-    #self_contained: true
+    self_contained: true
     css: [default, metropolis, metropolis-fonts]
     lib_dir: libs
     nature:
@@ -197,7 +197,7 @@ y el paquete `readxl`:
 
 ```r
 base_cuidar <- read.csv(
-  file = "C:/Users/pablo/Documents/Pablo/Cursos R/r_web/r_intro_citra/entradas/certificados-personas-por-fecha-ingreso-provincia-localidad.csv",
+  file = "C:/Users/pablo/Desktop/proyecto_cuidar/entradas/certificados-personas-por-fecha-ingreso.csv",
   header = TRUE, 
   sep = ",", 
   dec = ".")
@@ -213,7 +213,7 @@ base_cuidar <- read.csv(
 
 ```r
 base_cuidar <- read.csv(
-  'file = "C:/Users/pablo/Documents/Pablo/Cursos R/R+BigData/entradas/certificados-personas-por-fecha-ingreso-provincia-localidad.csv",'
+  'file = "C:/Users/pablo/Desktop/proyecto_cuidar/entradas/certificados-personas-por-fecha-ingreso.csv",'
   header = TRUE, 
   sep = ",", 
   dec = ".")
@@ -303,7 +303,7 @@ knitr::include_graphics("../img/proyecto_nuevo.png")
 
 ```r
 base_cuidar <- read.csv(
-  'file = "entradas/certificados-personas-por-fecha-ingreso-provincia-localidad.csv",'
+  'file = "entradas/certificados-personas-por-fecha-ingreso.csv",'
   header = TRUE, 
   sep = ",", 
   dec = ".")
@@ -358,7 +358,7 @@ knitr::include_graphics("../img/la_luz.gif")
 
     - 📂 entradas
     
-         - 📄 certificados-personas-por-fecha-ingreso-provincia-localidad.csv
+         - 📄 certificados-personas-por-fecha-ingreso.csv
     
     - 📂 salidas
     
@@ -379,7 +379,7 @@ knitr::include_graphics("../img/la_luz.gif")
   
      - 📂 entradas
      
-         - 📄 _certificados-personas-por-fecha-ingreso-provincia-localidad.csv_
+         - 📄 _certificados-personas-por-fecha-ingreso.csv_
      
      - 📂 salidas
      
@@ -401,7 +401,7 @@ knitr::include_graphics("../img/la_luz.gif")
   
     - 📂 entradas
   
-        - 📄 _certificados-personas-por-fecha-ingreso-provincia-localidad.csv_
+        - 📄 _certificados-personas-por-fecha-ingreso.csv_
   
     - 📂 salidas
     
@@ -415,25 +415,20 @@ knitr::include_graphics("../img/la_luz.gif")
 ---
 # Lectura / escritura de datos
 
-5) En el script, cargo los paquetes cuyas funciones voy a utilizar. En este caso, el paquete `readxl` para poder importar bases de datos de una extensión _.xlsx (Excel)_:
+5) En el script, cargo los paquetes cuyas funciones voy a utilizar. En este caso, voy a probar el paquete `readr` para poder importar bases de datos de una extensión _.csv (archivo separado por comas)_:
 
 ```{r}
-library(readxl)
+library(readr)
 ```
 
 --
 
-6) Creo un objeto en el cual voy a importar la base de datos y utilizo la función `read_xlsx()` para hacerlo.
+6) Creo un objeto en el cual voy a importar la base de datos y utilizo la función `read_csv()` para hacerlo.
 
 __Recordar:__ _Estamos en un proyecto, por lo que la ruta es a partir de la carpeta en la que se encuentra el mismo_
 
 ```r
-base_cuidar <- read_xlsx(file = "entradas/cuidar_verano_excel.xlsx")
-```
-
-```{r include=FALSE}
-#base_cuidar_excel <- read_xlsx(path = here("entradas", "cuidar_verano_excel.xlsx"))
-base_cuidar_excel <- read_xlsx(path = "../entradas/cuidar_verano_excel.xlsx")
+base_cuidar <- read_csv(file = "entradas/certificados-personas-por-fecha-ingreso.csv")
 ```
 
 ---
@@ -451,13 +446,6 @@ base_cuidar_excel <- read_xlsx(path = "../entradas/cuidar_verano_excel.xlsx")
 | `is.na()`         | *Verifica la presencia de valores NA (_missinh_) en la base/variable*|
 | `mean()`          | *Calcula el valor promedio de una variable numércia*|
 
-
----
-# Chusmeando la base
-
-```{r echo=FALSE}
-knitr::include_app("https://pablot.shinyapps.io/ejercicio_xaringan/")
-```
 
 ---
 class: inverse, middle, center
@@ -484,6 +472,6 @@ class: inverse, middle
 
 1. Importar la base de datos y aplicar alguna de las funciones descritas previamente
 
-`r countdown(minutes = 5, seconds = 00, update_every = 15)`
+`r countdown(minutes = 10, seconds = 00, update_every = 15)`
 
 
