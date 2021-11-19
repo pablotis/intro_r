@@ -28,7 +28,7 @@ navbar:
     - text: "Ejercitacion"
       menu:
         - text: "Modulo 01.a - R base - Practica"
-#          href: b_ejercitacion/01_r_intro_practica.html
+          href: b_ejercitacion/01_r_intro_practica.html
         - text: "Modulo 02 - Herramientas de procesamiento de datos"
 #          href: b_ejercitacion/02_tidyverse_practica.html
         - text: "Modulo 03 - Herramientas para la vizualizacion de datos"
