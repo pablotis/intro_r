@@ -289,7 +289,7 @@ prop.table(table(b_eph_ind$CH04))
 
 
 ```{r eval = F}
-`b_eph_ind$CH04` `%>%` # base_de_datos$variable
+b_eph_ind$CH04 `%>%` # base_de_datos$variable
   table() `%>%`        # Paso 1
   prop.table()       # Paso 2
 ```
@@ -610,7 +610,7 @@ base %>%
 
 
 ```{r echo=FALSE, fig.align = 'center', out.width='65%'}
-knitr::include_graphics(here("img", "filter_presentacion.png"))
+#knitr::include_graphics(here("img", "filter_presentacion.png"))
 ```
 
 

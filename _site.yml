@@ -20,7 +20,7 @@ navbar:
         - text: "Modulo 01.b - Proyecto de trabajo"
           href: a_diapositivas/01b_r_proyecto_de_trabajo.html
         - text: "Modulo 02 - Herramientas de procesamiento de datos"
-#          href: a_diapositivas/02_tidyverse.html
+          href: a_diapositivas/02_tidyverse.html
         - text: "Modulo 03 - Herramientas para la vizualizacion de datos"
 #          href: a_diapositivas/03_visualizacion.html
         - text: "Extra - Informes"
