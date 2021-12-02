@@ -118,7 +118,7 @@ class: inverse, middle, center
 
 
 ```{r echo=FALSE, fig.align = 'center'}
-knitr::include_graphics(here("img", "tidyverse.png"))
+knitr::include_graphics("../img/tidyverse.png")
 ```
 ]
 
@@ -147,7 +147,7 @@ class: inverse, middle, center
 - ### Funciones no pensadas para una tarea específica sino para un proceso de trabajo
 
 ```{r echo=FALSE, fig.align = 'center', out.width='50%'}
-knitr::include_graphics(here("img", "circuito del dato.png"))
+knitr::include_graphics("../img/circuito del dato.png")
 ```
 
 
@@ -326,7 +326,7 @@ class: middle, center, inverse
   
 
 ```{r echo=FALSE, out.width = '30%', fig.align = 'center'}
-knitr::include_graphics(here("img", "logo dplyr.png"))
+knitr::include_graphics("../img/logo dplyr.png")
 ```
 
 ---
@@ -372,7 +372,7 @@ base_de_datos %>%
 ```
 
 ```{r echo=FALSE, fig.align = 'center', out.width='65%'}
-knitr::include_graphics(here::here("img", "select_presentacion.png"))
+knitr::include_graphics("../img/select_presentacion.png")
 ```
 
 ---
@@ -595,7 +595,7 @@ base_de_datos %>%
 ```
 
 ```{r echo=FALSE, fig.align = 'center', out.width='65%'}
-knitr::include_graphics(here::here("img", "filter_presentacion.png"))
+knitr::include_graphics("../img/filter_presentacion.png")
 ```
 
 ---
@@ -610,7 +610,7 @@ base %>%
 
 
 ```{r echo=FALSE, fig.align = 'center', out.width='65%'}
-knitr::include_graphics(here("img", "filter_presentacion.png"))
+knitr::include_graphics("../img/filter_presentacion.png")
 ```
 
 
@@ -788,7 +788,7 @@ b_eph_ind %>%
 ### Función complementaria: `case_when()`, mayormente utilizada para recodificación de variables
 
 ```{r echo=FALSE, fig.align = 'center', out.width='100%'}
-knitr::include_graphics(here("img", "mutate_case.png"))
+knitr::include_graphics("../img/mutate_case.png")
 ```
 
 
@@ -1011,7 +1011,7 @@ b_eph_ind %>% #BREAK
 class: middle, center, inverse
   
 ```{r echo=FALSE, out.width = '30%', fig.align = 'center'}
-knitr::include_graphics(here("img", "logo tidyr.png"))
+knitr::include_graphics("../img/logo tidyr.png")
 ```
 
 ---
@@ -1034,7 +1034,7 @@ knitr::include_graphics(here("img", "logo tidyr.png"))
 .pull-left[
 
 ```{r echo=FALSE, out.width = '80%', fig.align = 'center'}
-knitr::include_graphics(here("img", "dato_ancho.png"))
+knitr::include_graphics("../img/dato_ancho.png")
 ```
 
 ]
@@ -1042,7 +1042,7 @@ knitr::include_graphics(here("img", "dato_ancho.png"))
 .pull-right[
 
 ```{r echo=FALSE, out.width = '80%', fig.align = 'center'}
-knitr::include_graphics(here("img", "dato_largo.png"))
+knitr::include_graphics("../img/dato_largo.png")
 ```
 
 ]
