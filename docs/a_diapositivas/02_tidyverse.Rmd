@@ -372,7 +372,7 @@ base_de_datos %>%
 ```
 
 ```{r echo=FALSE, fig.align = 'center', out.width='65%'}
-knitr::include_graphics(here("img", "select_presentacion.png"))
+knitr::include_graphics(here::here("img", "select_presentacion.png"))
 ```
 
 ---
@@ -595,7 +595,7 @@ base_de_datos %>%
 ```
 
 ```{r echo=FALSE, fig.align = 'center', out.width='65%'}
-knitr::include_graphics(here("img", "filter_presentacion.png"))
+knitr::include_graphics(here::here("img", "filter_presentacion.png"))
 ```
 
 ---
@@ -605,12 +605,12 @@ knitr::include_graphics(here("img", "filter_presentacion.png"))
 
 ```r
 base %>% 
-  `filter(Edad > 70)`
+  `filter(Edad > 65)`
 ```
 
 
 ```{r echo=FALSE, fig.align = 'center', out.width='65%'}
-#knitr::include_graphics(here("img", "filter_presentacion.png"))
+knitr::include_graphics(here("img", "filter_presentacion.png"))
 ```
 
 
