@@ -9,37 +9,23 @@ output:
 
 <br>
 
-## Manejo de bases de datos - Aplicacion con EPH
+## Procesamiento de datos con paquete `tidyverse` - Aplicacion con EPH
 
 <br>
 
 Luego de abordar las principales funciones necesarias para operar sobre las bases de datos, veremos su aplicación con la base individual de la EPH. 
 
 
-En primer lugar, importamos la base de datos, sea descargandola de la página del indec y luego importándola en R (funciones `read.table()`, por ejemplo), o utilizando el paquete `{eph}` y la función que directamente nos permite crear un objeto y en él la base:
-
-```{r, message=FALSE, warning=FALSE, eval=FALSE}
-# install.packages("eph")
-library(eph) 
-
-# elijo el año y trimestre en cuestión
-base_ind_eph <- get_microdata(year = 2019, trimester = 3, type = "individual")
-```
+En primer lugar, importamos la base de datos, sea [descargándola de la página del indec](https://www.indec.gob.ar/indec/web/Institucional-Indec-BasesDeDatos) y luego importándola en R (funciones como `read.table()`, por ejemplo), o utilizando el paquete `{eph}` y la función que directamente nos permite crear un objeto y en él la base (`get_microdata()`).
 
 <br>
 
-
-La función `read.table`, de re base, nos permite levantar los archivos de extensión ".txt"               
-La función `read.xlsx`, del paquete `{openxlsx}`, nos permite levantar los archivos de extensión ".xlsx"
-
-<br>
 
 ### **Ejercicio 1** - Cargamos la base de datos
 
-1.1.Levantar la base individual del primer trimestre de 2019.
+1.1.Levantar la base individual del primer trimestre de 2021.
 
 ```{r}
-
 
 ```
 
@@ -47,7 +33,7 @@ La función `read.xlsx`, del paquete `{openxlsx}`, nos permite levantar los arch
 
 ### **Ejercicio 2** - Conociendo los datos
 
-2.1. Obtener la estructura básica de nuestro dataframe (_pista: función `str()`_).
+2.1. Obtener la estructura básica de nuestro dataframe (_pista: funciónes como `str()`, `summary()`, `colnames()` pueden servir_).
 
 ```{r}
 
@@ -55,19 +41,16 @@ La función `read.xlsx`, del paquete `{openxlsx}`, nos permite levantar los arch
 
 <br>
 
-2.2. Obtener los estadísticos principales de la distribución del ingreso de la ocupación principal (Variable *P21*; funciones `mean()`, `median()` o directamente `summary()`):
+2.2. Obtener los estadísticos principales de la distribución del ingreso de la ocupación principal (Variable *P21*; funciones `mean()`, `median()`, `max()`, `min()` o directamente `summary()`):
 
 ```{r}
 
 ```
 
-```{r}
-
-```
 
 <br>
 
-2.3. Sacar la frecuencia simple de la variable ESTADO:
+2.3. Generar frecuencia simple de la variable **ESTADO** (cuántas veces aparece cada categoría):
 
 ```{r}
 
@@ -85,7 +68,7 @@ Cargamos la librería __tidyverse__ que vamos a utilizar para trabajar la base.
 library(tidyverse)
 ```
 
-3.1. Filtrar nuestra base para quedarnos solo con las observaciones de la region 43 y guardarlo en un objeto que se llame **pampeana**
+3.1. Filtrar nuestra base para quedarnos solo con las observaciones de la región 43 y guardarlo en un objeto que se llame **pampeana**
 
 
 ```{r}
@@ -103,7 +86,7 @@ library(tidyverse)
 
 <br>
 
-3.3. Crear una nueva variable **ingreso_horario** que sea el ingreso por hora de la ocupación principal (*P21*/*PP3E_TOT*) y guardarlo en la misma base de datos.
+3.3. Crear una nueva variable llamada **ingreso_horario** que sea el ingreso por hora de la ocupación principal (*P21*/*PP3E_TOT*). Guadar dicha operación en el mismo objeto y chequear que se haya hecho.
 
 ```{r}
 
@@ -111,17 +94,16 @@ library(tidyverse)
 
 <br>
 
-3.4. Crear una variable **nivel_ed2** que agrupe los niveles educativos de la variable **NIVEL_ED** en 4:
+3.4. Crear una variable llamada **nivel_ed2** que agrupe los niveles educativos de la variable **NIVEL_ED** en los siguientes 4:
 
 * Sin educación, primaria incompleta, o Ns.Nr.
 * Hasta secundaria incompleta
 * Hasta universitaria incompleta
 * Universitaria completa
 
-y guardarlo en la misma base de datos.
+Guardar dicho resultado en el mismo objeto con el que venimos trabajando y chequear que la operación se haya hecho.
 
 ```{r}
-
 
 ```
 
@@ -140,23 +122,14 @@ y guardarlo en un nuevo objeto llamado **recorte**.
 
 <br>
 
-3.6. Ordenar los datos del recorte anterior por **REGION** y **ESTADO**.
-
-```{r}
-
-
-```
-
-<br>
 
 3.7. Crear una tabla llamada **poblacion_ocupados** que me de la información del total de población y el total de los ocupados.
 
 Nota:
  - Población: Si contaramos cuantos registros tiene la base, simplemente tendríamos el numero de individuos muestral de la EPH, por ende debemos **sumar los valores de la variable PONDERA**, para contemplar a cuantas personas representa cada individuo encuestado. 
- - Ocupados: En este caso, debemos agregar un **filtro** al procedimiento anterior, ya que unicamente queremos sumar los ponderadores de aquellas personas que se encuentran ocupadas. (La lógica seria: "Suma los valores de la columna PONDERA, solo para aquellos registros donde el ESTADO == 1")    
+ - Ocupados: En este caso, debemos agregar un **filtro** al procedimiento anterior, ya que únicamente queremos sumar los ponderadores de aquellas personas que se encuentran ocupadas. (La lógica seria: _"Sumá los valores de la columna PONDERA, solo para aquellos registros donde el `ESTADO == 1`"_)    
 
 ```{r}
-
 
 ```
 
@@ -168,7 +141,6 @@ Nota:
       
 
 ```{r}
-
 
 ```
 
@@ -183,7 +155,6 @@ Nota:
 
 ```{r}
 
-
 ```
 
 <br>
@@ -193,29 +164,4 @@ Nota:
 
 ```{r}
 
-
 ```
-
-<br>
-
-3.11. Cargar la base "Aglomerados EPH" que se encuentra en la carpeta fuentes y guardarla en el ambiente de R con el nombre aglomeradoseph. Unir ambas bases a partir de la variable AGLOMERADO.
-
-```{r}
-
-
-```
-
-<br>
-
-3.12. Repetir el ejercicio 3.9. pero ahora por aglomerado, usando los nombres de los aglomerados y guardarlo en un objeto llamado **tasas_aglo**.
-
-
-```{r echo=TRUE}
-
-
-```
-
-
-
-
-  
