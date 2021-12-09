@@ -22,21 +22,16 @@ navbar:
         - text: "Modulo 02 - Herramientas de procesamiento de datos"
           href: a_diapositivas/02_tidyverse.html
         - text: "Modulo 03 - Herramientas para la vizualizacion de datos"
-#          href: a_diapositivas/03_visualizacion.html
+          href: a_diapositivas/03_visualizacion.html
         - text: "Extra - Informes"
-#          href: a_diapositivas/06_informes.html
+          href: a_diapositivas/04_informes.html
     - text: "Ejercitacion"
       menu:
         - text: "Modulo 01.a - R base - Practica"
           href: b_ejercitacion/01_r_intro_practica.html
         - text: "Modulo 02 - Herramientas de procesamiento de datos"
           href: b_ejercitacion/02_tidyverse_practica.html
-        - text: "Modulo 03 - Herramientas para la vizualizacion de datos"
-#          href: publish_article.html
-#        - text: "Modulo 04 - scrapeando datos"
-#          href: b_ejercitacion/04_scraper.R
-        - text: "Modulo 04 - Informes"
-#          href: a_diapositivas/06_informes.rmd
+#        - text: "Modulo 03 - Herramientas para la vizualizacion de datos"
     - text: "Bibliografia"
       href: biblio.html
     - icon: fab fa-github
